@@ -1,19 +1,15 @@
 //paspaudus mygtuka jo reiksme prilyginam a reiksmei, tada spaudziame
 // veiksma ir atra reiksme prilyginam b reiksmei ir paspaudus = suskaiciuojame
-"use strict"
+"use strict";
+
+//get all keys
+let keys = document.querySelectorAll("#buttons button");
 
 
-main();
-function main() {
-    document.getElementById("buttons").onclick = numbers;
-}
-function numbers(a, b, op) {
-    let num1 = a.target.id;
-    let num2 = b.target.id;
-
-    if (a.target.tagName == 'BUTTON') {
-        document.getElementById("calcDisplay").innerHTML = num1;
-    }else if (b.target.tagName == 'BUTTON') {
-        document.getElementById("calcDisplay").innerHTML = num2;
-    };
+for(let i = 0; i < keys.length; i++){
+    keys[i].onclick = function(e){
+       let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+        console.log(btnValue);
+        
+    }
 }
