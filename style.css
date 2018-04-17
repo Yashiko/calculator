@@ -15,11 +15,14 @@ body{
     height: 360px;
 }
 .display{
-    width: 260px;
+    width: 240px;
     height: 50px;
     margin: 20px;
     background: rgb(148, 141, 133);
     border-radius: 10px;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 40px;
 }
 ul{
     list-style-type: none;
