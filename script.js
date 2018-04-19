@@ -11,25 +11,42 @@ for(let i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
         let inputDisplay = document.getElementById("calcDisplay");
         let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
-        
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
+
         }else if(inputDisplay.innerHTML === ""){
-          inputDisplay.innerHTML = btnValue;
-        } else if(btnValue){
+            inputDisplay.innerHTML = btnValue;
+
+        }else if(btnValue){   //jei skaicius yra is dvieju zenklu
             inputDisplay.innerHTML += btnValue;
         }
 
-        switch(btnValue){
-            case '*':
-                let result = 2*2;
-                inputDisplay.innerHTML = result;
-                break;
-            case '/':
-                let result1 = 4/2;
-                inputDisplay.innerHTML = result1;
-                break;
 
+
+
+
+        // if(btnValue == "="){
+        //     let result = "suma";
+        //     inputDisplay.innerHTML = result;
+
+        // }
+    
+    }
+    let operators = document.querySelectorAll(".operator");
+    let operLen = operators.length;
+    for(let y = 0; y < operLen; y++){
+        operLen[y].onclick = function(x){
+            
         }
     }
 }
+// switch(btnValue){
+//     case '*':
+//         let result = btnValue*btnValue;
+//         inputDisplay.innerHTML = result;
+//         break;
+//     case '/':
+//         let result1 = 4/2;
+//         inputDisplay.innerHTML = result1;
+//         break;
+// }
