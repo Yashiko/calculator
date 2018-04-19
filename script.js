@@ -15,10 +15,9 @@ for(let i = 0; i < keys.length; i++){
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
         }else if(inputDisplay.innerHTML === ""){
-            inputDisplay.innerHTML = btnValue;
-        } else if(inputDisplay.innerHTML = btnValue){
+          inputDisplay.innerHTML = btnValue;
+        } else if(btnValue){
             inputDisplay.innerHTML += btnValue;
-
         }
 
         switch(btnValue){
