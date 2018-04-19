@@ -4,7 +4,7 @@
 
 //get all keys
 let keys = document.querySelectorAll(".buttons-body button");
-var operators = ['+', '-', '*', '/'];
+// var operators = ['+', '-', '*', '/'];
 
 //loop through all keys
 for(let i = 0; i < keys.length; i++){
@@ -14,8 +14,11 @@ for(let i = 0; i < keys.length; i++){
         
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
-        }else{
+        }else if(inputDisplay.innerHTML === ""){
             inputDisplay.innerHTML = btnValue;
+        } else if(inputDisplay.innerHTML = btnValue){
+            inputDisplay.innerHTML += btnValue;
+
         }
 
         switch(btnValue){
@@ -29,8 +32,5 @@ for(let i = 0; i < keys.length; i++){
                 break;
 
         }
-        
-
     }
-
 }
