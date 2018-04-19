@@ -17,8 +17,9 @@ for(let i = 0; i < keys.length; i++){
             inputDisplay.innerHTML = btnValue;
 
         }else if(btnValue){   //jei skaicius yra is dvieju zenklu
-            inputDisplay.innerHTML += btnValue;
-        }
+            btnValue = inputDisplay.innerHTML += btnValue; // dvizenklis skaicius
+            console.log(btnValue)
+        };
 
         let operators = document.querySelectorAll(".operator");
         let operLen = operators.length;
