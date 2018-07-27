@@ -9,7 +9,14 @@ let keys = document.querySelectorAll(".buttons-body button");
 for(let i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
         let inputDisplay = document.getElementById("calcDisplay");
-        let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+        function getValue(){
+            let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+            let btnValue2 = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+            return [btnValue, btnValue2];
+        }
+        // let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+        // let btnValue2 = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
 
