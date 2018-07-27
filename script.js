@@ -5,36 +5,38 @@
 //get all keys
 let keys = document.querySelectorAll(".buttons-body button");
 // let operators = document.querySelectorAll(".operator");
-
+ 
 //loop through all keys
 for(let i = 0; i < keys.length; i++){
+
     keys[i].onclick = function(e){
         let inputDisplay = document.getElementById("calcDisplay");
         let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
         let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
+
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
 
         }else if(inputDisplay.innerHTML === ""){
             inputDisplay.innerHTML = btnValue;
+            let num1 = btnValue;
 
-        }else if(btnValue===operatorValue){   //jei skaicius yra is dvieju zenklu
-
+        }else if(operatorValue){   //jei skaicius yra is dvieju zenklu
             // btnValue = inputDisplay.innerHTML += btnValue; // dvizenklis skaicius
-            console.log(btnValue);
+            inputDisplay.innerHTML = btnValue + btnValue;
+
         };
 
-        // let operators = document.querySelectorAll(".operator");
-        // let operLen = operators.length;
-        // for(let y = 0; y < operLen; y++){
+
+    
+        // for(let y = 0; y < operators.length; y++){
         //     operators[y].addEventListener("click",function() {
-        //         let op = this.value; //paspausto mygtuko reiksme
         //         if(inputDisplay.innerHTML === "") {
             
-        //             inputDisplay.innerHTML = inputDisplay.innerHTML.concat("");
+        //             inputDisplay.innerHTML = btnValue+btnValue;
                     
         //         }else if(btnValue) {
-        //             inputDisplay.innerHTML = btnValue.concat(op);
+        //             inputDisplay.innerHTML = btnValue;
                     
         //         }
                    
@@ -46,13 +48,6 @@ for(let i = 0; i < keys.length; i++){
 
 }
 
-// switch(btnValue){
-//     case '*':
-//         let result = btnValue*btnValue;
-//         inputDisplay.innerHTML = result;
-//         break;
-//     case '/':
-//         let result1 = 4/2;
-//         inputDisplay.innerHTML = result1;
-//         break;
-// }
+function add(){
+
+}
