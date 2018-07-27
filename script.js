@@ -1,7 +1,7 @@
 //paspaudus mygtuka jo reiksme prilyginam a reiksmei, tada spaudziame
 // veiksma ir atra reiksme prilyginam b reiksmei ir paspaudus = suskaiciuojame
 "use strict";
-
+//Naujas Projekto etapas
 //get all keys
 let keys = document.querySelectorAll(".buttons-body button");
 
