@@ -1,49 +1,44 @@
 //paspaudus mygtuka jo reiksme prilyginam a reiksmei, tada spaudziame
 // veiksma ir atra reiksme prilyginam b reiksmei ir paspaudus = suskaiciuojame
 "use strict";
-//Naujas Projekto etapas
+//Naujas Projekto
 //get all keys
 let keys = document.querySelectorAll(".buttons-body button");
 
 //loop through all keys
 for(let i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
+        let operators = document.querySelectorAll(".operator");
         let inputDisplay = document.getElementById("calcDisplay");
-        function getValue(){
-            let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
-            let btnValue2 = this.getAttribute("data-value"); //paspausto mygtuko reiksme
-            return [btnValue, btnValue2];
-        }
-        // let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
-        // let btnValue2 = this.getAttribute("data-value"); //paspausto mygtuko reiksme
-
+        let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
 
         }else if(inputDisplay.innerHTML === ""){
             inputDisplay.innerHTML = btnValue;
 
-        }else if(btnValue){   //jei skaicius yra is dvieju zenklu
+        }else if(btnValue===operators){   //jei skaicius yra is dvieju zenklu
+
             btnValue = inputDisplay.innerHTML += btnValue; // dvizenklis skaicius
-            console.log(btnValue)
+            // console.log(btnValue);
         };
 
-        let operators = document.querySelectorAll(".operator");
-        let operLen = operators.length;
-        for(let y = 0; y < operLen; y++){
-            operators[y].addEventListener("click",function() {
-                let op = this.value; //paspausto mygtuko reiksme
-                if(inputDisplay.innerHTML === "") {
+        // let operators = document.querySelectorAll(".operator");
+        // let operLen = operators.length;
+        // for(let y = 0; y < operLen; y++){
+        //     operators[y].addEventListener("click",function() {
+        //         let op = this.value; //paspausto mygtuko reiksme
+        //         if(inputDisplay.innerHTML === "") {
             
-                    inputDisplay.innerHTML = inputDisplay.innerHTML.concat("");
+        //             inputDisplay.innerHTML = inputDisplay.innerHTML.concat("");
                     
-                }else if(btnValue) {
-                    inputDisplay.innerHTML = btnValue.concat(op);
+        //         }else if(btnValue) {
+        //             inputDisplay.innerHTML = btnValue.concat(op);
                     
-                }
+        //         }
                    
-            })
-        }
+        //     })
+        // }
 
 
     }
