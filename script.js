@@ -4,23 +4,24 @@
 //Naujas Projekto
 //get all keys
 let keys = document.querySelectorAll(".buttons-body button");
+// let operators = document.querySelectorAll(".operator");
 
 //loop through all keys
 for(let i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
-        let operators = document.querySelectorAll(".operator");
         let inputDisplay = document.getElementById("calcDisplay");
         let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+        let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " ";
 
         }else if(inputDisplay.innerHTML === ""){
             inputDisplay.innerHTML = btnValue;
 
-        }else if(btnValue===operators){   //jei skaicius yra is dvieju zenklu
+        }else if(btnValue===operatorValue){   //jei skaicius yra is dvieju zenklu
 
-            btnValue = inputDisplay.innerHTML += btnValue; // dvizenklis skaicius
-            // console.log(btnValue);
+            // btnValue = inputDisplay.innerHTML += btnValue; // dvizenklis skaicius
+            console.log(btnValue);
         };
 
         // let operators = document.querySelectorAll(".operator");
