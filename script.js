@@ -4,7 +4,7 @@
 //Naujas Projekto
 //get all keys
 let keys = document.querySelectorAll(".buttons-body button");
-let operators = document.querySelectorAll(".operator");
+// let operators = document.querySelectorAll(".buttons-body .operator");
  
 //loop through all keys
 for(let i = 0; i < keys.length; i++){
@@ -12,19 +12,19 @@ for(let i = 0; i < keys.length; i++){
         let inputDisplay = document.getElementById("calcDisplay");
         let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
         let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
-
-        let decimalAdded = false; //istrintu visus duomenis
+        // let btnValue2 = this.getAttribute("data-value");
 
         inputDisplay.innerHTML = btnValue;
         console.log(btnValue);
+
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " "; 
-            let decimalAdded = false; //istrintu visus duomenis
-        }else if(operatorValue == "+"){
-            console.log(operatorValue);
-            inputDisplay.innerHTML = btnValue;
 
+        }else if( btnValue == "+"){
+               console.log(operatorValue);
+            
         }
+
     // for(let y = 0; y < operators.length; y++){
     //     let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
     //     operators[y].addEventListener("click",function() {
