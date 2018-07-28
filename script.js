@@ -11,31 +11,25 @@ for(let i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
         let inputDisplay = document.getElementById("calcDisplay");
         let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
+        let operatorValue = this.getAttribute("value");
         if (btnValue == "C"){  
-            inputDisplay.innerHTML = " ";
-
+            inputDisplay.innerHTML = " "; 
         }else if(inputDisplay.innerHTML === ""){
             inputDisplay.innerHTML = btnValue;
 
-        };
 
     }
-}
-for(let y = 0; y < operators.length; y++){
-    let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
-    operators[y].addEventListener("click",function() {
-        if(operatorValue) {
-    
-            inputDisplay.innerHTML = operatorValue;
-            
-        }else {
-            inputDisplay.innerHTML =" btnValue";
-            
-        }
-           
-    })
-}
-
-function add(){
-
-}
+    // for(let y = 0; y < operators.length; y++){
+    //     let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
+    //     operators[y].addEventListener("click",function() {
+    //         if(operatorValue) {
+        
+    //             inputDisplay.innerHTML = operatorValue;
+                
+    //         }else {
+    //             inputDisplay.innerHTML =" btnValue";
+                
+    //         }
+               
+    //     });
+    }}
