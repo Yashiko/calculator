@@ -11,14 +11,20 @@ for(let i = 0; i < keys.length; i++){
     keys[i].onclick = function(e){
         let inputDisplay = document.getElementById("calcDisplay");
         let btnValue = this.getAttribute("data-value"); //paspausto mygtuko reiksme
-        let operatorValue = this.getAttribute("value");
+        let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
+
+        let decimalAdded = false; //istrintu visus duomenis
+
+        inputDisplay.innerHTML = btnValue;
+        console.log(btnValue);
         if (btnValue == "C"){  
             inputDisplay.innerHTML = " "; 
-        }else if(inputDisplay.innerHTML === ""){
+            let decimalAdded = false; //istrintu visus duomenis
+        }else if(operatorValue == "+"){
+            console.log(operatorValue);
             inputDisplay.innerHTML = btnValue;
 
-
-    }
+        }
     // for(let y = 0; y < operators.length; y++){
     //     let operatorValue = this.getAttribute("value"); //oeratoriaus reiksme
     //     operators[y].addEventListener("click",function() {
