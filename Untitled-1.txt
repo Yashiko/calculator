@@ -1,0 +1,14 @@
+<input type="button" onclick="myFunction()" id="myBtn" value="Try it">
+
+<input type="button" onclick="myFunction2()" id="myBtn2" value="Tryt">
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myBtn").value;
+    document.getElementById("demo").innerHTML = x;
+}
+function myFunction2() {
+  var y = document.getElementById("myBtn2").value;
+  document.getElementById("demo").innerHTML = y;
+}
