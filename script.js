@@ -1,20 +1,27 @@
 
 "use strict";
 
+//read display content
+let inputDisplay = document.getElementById("calcDisplay");
 
-        let inputDisplay = document.getElementById("calcDisplay");
+function pushBtn(obj) {
+    let value = obj.innerHTML;
+    if (value == "=") {
         
-        function pushBtn(obj){
-            let push = obj.innerHTML;
-
-            if (push == "="){
-                //calculate
-                inputDisplay.innerHTML = eval(inputDisplay.innerHTML);
-            }else if(push == "C"){
-                //All clear
-                inputDisplay.innerHTML = ' ';
-                inputDisplay.innerHTML = push;
-            } else {
-                inputDisplay.innerHTML += push
-            }
+        //calculate values
+        let result = eval(inputDisplay.innerHTML);
+        let n = result.length
+        if( n > 7){
+           inputDisplay.innerHTML = result.toFixed(8);
+        } else {
+            inputDisplay.innerHTML = result;
         }
+        
+    } else if (value == "C") {
+        //clear dispay
+        inputDisplay.innerHTML = ' ';
+    } else {
+        //show pressed value into display
+        inputDisplay.innerHTML += value
+    }
+}
