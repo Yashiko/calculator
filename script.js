@@ -12,7 +12,7 @@
                 inputDisplay.innerHTML = eval(inputDisplay.innerHTML);
             }else if(push == "C"){
                 //All clear
-                inputDisplay.innerHTML = '0';
+                inputDisplay.innerHTML = ' ';
                 inputDisplay.innerHTML = push;
             } else {
                 inputDisplay.innerHTML += push
