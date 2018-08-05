@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,73 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="calc-body">
-                <div class="display" id="calcDisplay"></div>
-                <div class="buttons-body">
-                    <ul id="buttons">
-                        <li class="button-left"><button onclick="pushBtn(this);">7</button></li>
-                        <li><button  onclick="pushBtn(this);">8</button></li>
-                        <li><button  onclick="pushBtn(this);">9</button></li>
-                        <li><button  onclick="pushBtn(this);">/</button></li>
+            <div class="display" id="calcDisplay"></div>
+            <div class="buttons-body">
+                <ul id="buttons">
+                    <li class="button-left">
+                        <button onclick="pushBtn(this);">7</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">8</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">9</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">/</button>
+                    </li>
 
-                        <li class="button-left"><button  onclick="pushBtn(this);">4</button></li>
-                        <li><button  onclick="pushBtn(this);">5</button></li>
-                        <li><button  onclick="pushBtn(this);">6</button></li>
-                        <li><button  onclick="pushBtn(this);">*</button></li>
+                    <li class="button-left">
+                        <button onclick="pushBtn(this);">4</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">5</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">6</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">*</button>
+                    </li>
 
-                        <li class="button-left"><button  onclick="pushBtn(this);">1</button></li>
-                        <li><button  onclick="pushBtn(this);">2</button></li>
-                        <li><button  onclick="pushBtn(this);">3</button></li>
-                        <li><button  onclick="pushBtn(this);">-</button></li>
+                    <li class="button-left">
+                        <button onclick="pushBtn(this);">1</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">2</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">3</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">-</button>
+                    </li>
 
-                        <li class="button-left"><button onclick="pushBtn(this);">0</button></li>
-                        <li><button onclick="pushBtn(this);">.</button></li>
-                        <li><button onclick="pushBtn(this);" id="operand">+</button></li>
-                        <li><button class="btn-equil" onclick="pushBtn(this);" >=</button></li>                      
-                    </ul>
-                    <button onclick="pushBtn(this);">C</button>
-                </div>
+                    <li class="button-left">
+                        <button onclick="pushBtn(this);">0</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);">.</button>
+                    </li>
+                    <li>
+                        <button onclick="pushBtn(this);" id="operand">+</button>
+                    </li>
+                    <li>
+                        <button class="btn-equil" onclick="pushBtn(this);">=</button>
+                    </li>
+                </ul>
+                <button onclick="pushBtn(this);">C</button>
+            </div>
         </div>
     </div>
-    
 
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
