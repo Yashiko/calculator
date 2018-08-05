@@ -10,9 +10,11 @@ function pushBtn(obj) {
         
         //calculate values
         let result = eval(inputDisplay.innerHTML);
-        let n = result.length
-        if( n > 7){
-           inputDisplay.innerHTML = result.toFixed(8);
+        let b = result.length;
+        console.log(b);
+        if (result.length >= 11){
+            
+            inputDisplay.innerHTML = result.tofixed(11);
         } else {
             inputDisplay.innerHTML = result;
         }
