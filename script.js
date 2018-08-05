@@ -11,6 +11,8 @@ for (let i = 0; i < keys.length; i++) {
         let inputDisplay = document.getElementById("calcDisplay");
         inputDisplay.innerHTML = this.value;
         let inputValue = inputDisplay.innerHTML;
+        console.log(inputValue);
+        
        if (this.value === "C"){  
             inputDisplay.innerHTML = " "; 
         }
@@ -28,10 +30,8 @@ for (let i = 0; i < keys.length; i++) {
         } else if (this.value == "-") {
             num2 = this.getAttribute("value"); //paspausto mygtuko reiksme
             ats = Number(num1) - Number(num2);
-        }
-        // console.log(this.value);
- 
-
+        };
+        
         if ( this.value == "=") {
             inputDisplay.innerHTML = ats; // 'this' is the button that gets clicked. We add its value to the input field
         }
